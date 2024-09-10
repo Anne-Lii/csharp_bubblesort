@@ -25,6 +25,14 @@ class Program
     static void Main(string[] args)
     {
 
+        if (args.Length < 2 || args[0] != "-p")
+        {
+            Console.WriteLine("Skriv dotnet run -- -p 0 för stigande, 1 för fallande>");
+            return;
+        }
+
+        bool sortDescending = args[1] == "1"; //sortera fallande om 1, annars stigande
+
         int[] array = RandomArray(100); //skapar en array med 100 tal
         int[] clonedForBubblesort = (int[])array.Clone();//klon av array för bubblesort
         int[] clonedForArraysort = (int[])array.Clone();//klon av array för Array.Sort
@@ -35,7 +43,7 @@ class Program
         //Mäter tiden för att sortera Bubblesort
         Stopwatch stopwatch = new Stopwatch(); //nytt tidur
         stopwatch.Start(); //starta tidur
-        Bubblesort(clonedForBubblesort); //anropar Bubblesort och skickar med clonad data
+        Bubblesort(clonedForBubblesort, sortDescending); //anropar Bubblesort med vald sortering
         stopwatch.Stop(); //stoppar tidur
         Console.WriteLine("Sorterad med Bubblesort: ");
         Console.WriteLine(string.Join(", ", clonedForBubblesort));
@@ -44,13 +52,17 @@ class Program
 
         //Mäter tiden för att sortera Array.Sort
         stopwatch.Restart(); //nollställer tidur
-        Array.Sort(clonedForArraysort);//sorterar clonad data med inbyggd sortering
+        Array.Sort(clonedForArraysort);//sorterar clonad data i stigande ordning
+        if (sortDescending)
+        {
+            Array.Reverse(clonedForArraysort); //sorterar fallande ordning
+        }
         stopwatch.Stop(); //stoppar tidur
         Console.WriteLine("\nArray.Sort sorterad array:");
         Console.WriteLine(string.Join(", ", clonedForArraysort));
         Console.WriteLine($"Tid att sortera med Array.Sort: {stopwatch.ElapsedMilliseconds} ms");
     }
-    static void Bubblesort(int[] data)
+    static void Bubblesort(int[] data, bool sortDescending)
     {
         bool needsSorting = true;
 
@@ -60,8 +72,7 @@ class Program
             needsSorting = false;
             for (int j = 0; j < data.Length - 1 - i; j++)
             {
-                //flytta större tal framåt
-                if (data[j] > data[j + 1])
+                 if ((sortDescending && data[j] < data[j + 1]) || (!sortDescending && data[j] > data[j + 1]))
                 {
                     //sortera
                     needsSorting = true;
