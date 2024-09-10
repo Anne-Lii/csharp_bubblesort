@@ -1,0 +1,15 @@
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.AssemblyInfoInputs.cache
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.AssemblyInfo.cs
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.csproj.CoreCompileInputs.cache
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.sourcelink.json
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\bin\Debug\net8.0\bubbleSort.exe
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\bin\Debug\net8.0\bubbleSort.deps.json
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\bin\Debug\net8.0\bubbleSort.runtimeconfig.json
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\bin\Debug\net8.0\bubbleSort.dll
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\bin\Debug\net8.0\bubbleSort.pdb
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.dll
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\refint\bubbleSort.dll
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.pdb
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\bubbleSort.genruntimeconfig.cache
+C:\mittuniversitetet\csharpdotnet\moment2\moment2_2\bubbleSort\obj\Debug\net8.0\ref\bubbleSort.dll
