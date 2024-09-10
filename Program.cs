@@ -33,6 +33,7 @@ class Program
 
         bool sortDescending = args[1] == "1"; //sortera fallande om 1, annars stigande
 
+        //klonar för att få samma array till båda sorteringarna
         int[] array = RandomArray(100); //skapar en array med 100 tal
         int[] clonedForBubblesort = (int[])array.Clone();//klon av array för bubblesort
         int[] clonedForArraysort = (int[])array.Clone();//klon av array för Array.Sort
@@ -62,6 +63,8 @@ class Program
         Console.WriteLine(string.Join(", ", clonedForArraysort));
         Console.WriteLine($"Tid att sortera med Array.Sort: {stopwatch.ElapsedMilliseconds} ms");
     }
+
+    //Bubblesort-algoritm för att sortera en array
     static void Bubblesort(int[] data, bool sortDescending)
     {
         bool needsSorting = true;
@@ -72,10 +75,12 @@ class Program
             needsSorting = false;
             for (int j = 0; j < data.Length - 1 - i; j++)
             {
+                //jämför tal beroende på om sortering ska vara fallande eller stigande
                  if ((sortDescending && data[j] < data[j + 1]) || (!sortDescending && data[j] > data[j + 1]))
                 {
                     //sortera
                     needsSorting = true;
+                    
                     //Byt plats på tal
                     int temp = data[j + 1];
                     data[j + 1] = data[j];
